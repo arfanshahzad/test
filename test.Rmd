@@ -1,0 +1,29 @@
+---
+title: "Regression of Sale, with X1 to C=X14"
+output: word_document
+date: "`r Sys.Date()`"
+---
+
+# Single Regression
+```{r}
+library(readr)
+Sample_gE <- read.delim("D:/Tasks/Regression on R/Sample_gE.txt")
+View(Sample_gE)
+head(Sample_gE)
+attach(Sample_gE)
+x1
+Y<-y
+y
+x<-x1
+x
+cor(x,y)
+Regression<-lm(y~x,data=Sample_gE)
+summary(Regression)
+```
+
+#Multiple Regression
+```{r}
+Multiple.Regressin <- lm(y~x1+x2+x3+x3+x4+x5+x6+x7+x8+x9+x10+x11+x12+x13+x14, data=Sample_gE)
+summary(Multiple.Regressin)
+```
+# The end
